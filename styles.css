@@ -1,0 +1,66 @@
+#toggleSidebarButton {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    overflow: hidden;
+    outline: none;
+  }
+  
+  /* Efeito de mudança de cor ao passar o mouse */
+  #toggleSidebarButton:hover {
+    background-color: #128C7E;
+  }
+  
+  /* Efeito de onda */
+  #toggleSidebarButton.ripple::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    transform: scale(0);
+    opacity: 1;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  
+  #toggleSidebarButton:active::after {
+    transform: scale(4);
+    opacity: 0;
+  }
+  
+  
+  /* Ajuste da largura máxima das mensagens enviadas para caber em telas menores */
+.message-out {
+  max-width: 90vw; /* Limita a largura das mensagens a 90% da largura da tela */
+  overflow-wrap: break-word; /* Quebra linhas longas automaticamente */
+  word-break: break-word; /* Quebra palavras longas automaticamente */
+}
+
+/* Ajuste de posição para garantir que o balão de mensagem não saia da tela */
+.message-out ._amk7,
+.tail-override-right ._amk7 {
+  right: 0; /* Ajuste para evitar que o balão saia para fora da tela */
+}
+
+.message-out._anz0 ._amj_ {
+  right: 0; /* Ajuste para garantir que a cauda da mensagem fique visível */
+}
+
+/* Limita o comportamento para mensagens enviadas e recebidas */
+.message-out._aml0,
+.message-in._aml0 {
+  max-width: 90%; /* Ajusta a largura máxima de qualquer mensagem */
+}

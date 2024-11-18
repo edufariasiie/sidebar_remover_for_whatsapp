@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp Web Custom Plugin",
+  "version": "1.1",
+  "description": "Adiciona recursos de ocultação e ajuste de mensagens ao WhatsApp Web.",
+  "permissions": ["storage", "scripting"],
+  "host_permissions": ["https://web.whatsapp.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
